@@ -1,0 +1,36 @@
+
+<div class="help">
+
+  <div class="pagination pagination-centered">
+  <ul>
+    <li ng-repeat="n in [1,pageCount] | range">
+      <a href="" ng-click="loadPage(n)">{{n}}</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+	<div ng-repeat="wine in wines | orderBy:'name'" ng-show ="hasPic()" class="span3">
+
+	 	<a href="#/EditWines/{{ wine._id }}" class="thumbnail plain" style="text-align: center;">
+
+	    <img  ng-src="./Pictures/{{wine.picture}}" alt=""></img>
+
+	    <h5>{{wine.name}}</h5>
+
+	    {{wine.year}} ,  {{ wine.grapes }}<br/>
+
+	    <i class="icon-globe"></i> {{wine.region}} , {{wine.country}}
+
+		</a>
+    </div>
+
+<br/>
+
+
+
+
+<br/>
+
+ 

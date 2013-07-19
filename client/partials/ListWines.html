@@ -1,0 +1,45 @@
+
+<div class="hero-unit">
+<h3>Wines Cellar</h3>
+</div>
+
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Grapes</th>
+      <th>Region</th>
+      <th>Country</th>
+    </thead>
+
+  <tr ng-repeat="wine in wines | orderBy:'name'">
+
+      <td>
+          <a href="#/EditWines/{{ wine._id }}" style="text-align: center;">
+              {{ wine.name }} 
+          </a>
+      </td>
+
+      <td>
+          {{ wine.year }}  
+          
+      </td>
+      
+      <td>
+         {{ wine.grapes }} 
+        
+      </td>
+
+      <td>
+         {{ wine.region  }}  
+          
+      </td>
+
+      <td>
+           {{ wine.country }} 
+         
+      </td>
+
+    </tr>
+  </table>
+

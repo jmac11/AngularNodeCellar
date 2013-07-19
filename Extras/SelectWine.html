@@ -1,0 +1,71 @@
+ <fieldset>
+
+	<legend>
+		Wine Details
+	</legend>
+
+</fieldset>
+
+
+
+
+<div class="row">
+
+	 <div  class="span4">
+
+
+	        <select ng-model="wine" ng-options="w.name for w in wines">
+
+	          <option value="">-- chose wine --</option>
+
+	        </select>
+
+	 </div>
+
+	 	
+      
+	<div ng-show="selectwine()">
+			<table class="table table-striped table-hover table-bordered">
+			    <thead>	     
+			     <th>Name</th>
+			      <th>Year</th>
+			      <th>Grapes</th>
+			      <th>Region</th>
+			      <th>Country</th>
+			    </thead>
+
+				  <tr>
+
+				      <td>
+				          
+				        {{ wine.name }} 
+				 
+				      </td>
+
+				      <td>
+				          {{ wine.year }}  
+				          
+				      </td>
+				      
+				      <td>
+				         {{ wine.grapes }} 
+				        
+				      </td>
+
+				      <td>
+				         {{ wine.region  }}  
+				          
+				      </td>
+
+				      <td>
+				           {{ wine.country }} 
+				         
+				      </td>
+
+				    </tr>
+		  </table>
+	</div>
+</div>
+			
+
+
